@@ -1,15 +1,93 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f8ff;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+h1, h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+li {
+  background: #ffffff;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+li:hover {
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.15);
+}
+
+.nav-link-active {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.pokemon-detail {
+  max-width: 400px;
+  margin: 1rem auto;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+
+.pokemon-detail img {
+  width: 150px;
+  height: 150px;
+  image-rendering: pixelated;
+  margin-bottom: 1rem;
+}
+
+.pokemon-detail p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: #2980b9;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .pokemon-detail {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  li {
+    font-size: 0.9rem;
   }
 }
